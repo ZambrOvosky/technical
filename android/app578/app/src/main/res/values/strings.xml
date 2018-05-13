@@ -20,4 +20,10 @@
     <string name="edT_width">Largura</string>
     <string name="rdB_register">Registrar outro cômodo</string>
     <string name="btn_total">Registrar Cômodo</string>
+
+    <!-- Example08Activity -->
+    <string name="txV_title08">Veja a seguencia de Fibonacchi até o 12º termo</string>
+    <string name="btn_sequence">Calcular Sequência</string>
+
+    <!-- ResultActivity -->
 </resources>

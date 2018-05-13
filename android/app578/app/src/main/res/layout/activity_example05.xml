@@ -46,6 +46,7 @@
             android:id="@+id/btn_distance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="calculate()"
             android:text="@string/btn_distance"
             android:textSize="18sp" />
     </LinearLayout>

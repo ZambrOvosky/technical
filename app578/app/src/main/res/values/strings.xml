@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">app-578</string>
+
+    <!-- MainActivity -->
+    <string name="rgB_radio05">Exercício 05</string>
+    <string name="rgB_radio07">Exercício 07</string>
+    <string name="rgB_radio08">Exercício 08</string>
+    <string name="btn_open">Abrir Selecionado</string>
+
+    <!-- Example05Activity -->
+    <string name="txV_title05">Descubra a distância percorrida</string>
+    <string name="edT_diameter">Diâmetro da roda</string>
+    <string name="edT_lap">Voltas efetuadas</string>
+    <string name="btn_distance">Descobrir Distância</string>
+
+    <!-- Example07Activity -->
+    <string name="txV_title07">Descubra a área total de uma residência</string>
+    <string name="edT_room">Nome do Cômodo</string>
+    <string name="edT_lenght">Comprimento</string>
+    <string name="edT_width">Largura</string>
+    <string name="rdB_register">Registrar outro cômodo</string>
+    <string name="btn_total">Registrar Cômodo</string>
+</resources>

@@ -5,8 +5,11 @@
  */
 package memory;
 
+import java.io.File;
 import java.util.Random;
 import javax.swing.JOptionPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 /**
  *
@@ -47,10 +50,16 @@ public class MemoryGame extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Jogo da Memória");
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(400, 400));
 
-        Btn1.setBackground(new java.awt.Color(102, 102, 102));
+        Btn1.setBackground(new java.awt.Color(102, 204, 255));
+        Btn1.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn1.setForeground(new java.awt.Color(102, 102, 102));
+        Btn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn1.setBorderPainted(false);
+        Btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn1.setEnabled(false);
         Btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,38 +67,152 @@ public class MemoryGame extends javax.swing.JFrame {
             }
         });
 
-        Btn2.setBackground(new java.awt.Color(102, 102, 102));
+        Btn2.setBackground(new java.awt.Color(102, 204, 255));
+        Btn2.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn2.setForeground(new java.awt.Color(102, 102, 102));
+        Btn2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn2.setBorderPainted(false);
+        Btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn2.setEnabled(false);
+        Btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn2ActionPerformed(evt);
+            }
+        });
 
-        Btn3.setBackground(new java.awt.Color(102, 102, 102));
+        Btn3.setBackground(new java.awt.Color(102, 204, 255));
+        Btn3.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn3.setForeground(new java.awt.Color(102, 102, 102));
+        Btn3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn3.setBorderPainted(false);
+        Btn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn3.setEnabled(false);
+        Btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn3ActionPerformed(evt);
+            }
+        });
 
-        Btn4.setBackground(new java.awt.Color(102, 102, 102));
+        Btn4.setBackground(new java.awt.Color(102, 204, 255));
+        Btn4.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn4.setForeground(new java.awt.Color(102, 102, 102));
+        Btn4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn4.setBorderPainted(false);
+        Btn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn4.setEnabled(false);
+        Btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn4ActionPerformed(evt);
+            }
+        });
 
-        Btn5.setBackground(new java.awt.Color(102, 102, 102));
+        Btn5.setBackground(new java.awt.Color(102, 204, 255));
+        Btn5.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn5.setForeground(new java.awt.Color(102, 102, 102));
+        Btn5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn5.setBorderPainted(false);
+        Btn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn5.setEnabled(false);
+        Btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn5ActionPerformed(evt);
+            }
+        });
 
-        Btn6.setBackground(new java.awt.Color(102, 102, 102));
+        Btn6.setBackground(new java.awt.Color(102, 204, 255));
+        Btn6.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn6.setForeground(new java.awt.Color(102, 102, 102));
+        Btn6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn6.setBorderPainted(false);
+        Btn6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn6.setEnabled(false);
+        Btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn6ActionPerformed(evt);
+            }
+        });
 
-        Btn7.setBackground(new java.awt.Color(102, 102, 102));
+        Btn7.setBackground(new java.awt.Color(102, 204, 255));
+        Btn7.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn7.setForeground(new java.awt.Color(102, 102, 102));
+        Btn7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn7.setBorderPainted(false);
+        Btn7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn7.setEnabled(false);
+        Btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn7ActionPerformed(evt);
+            }
+        });
 
-        Btn8.setBackground(new java.awt.Color(102, 102, 102));
+        Btn8.setBackground(new java.awt.Color(102, 204, 255));
+        Btn8.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn8.setForeground(new java.awt.Color(102, 102, 102));
+        Btn8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn8.setBorderPainted(false);
+        Btn8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn8.setEnabled(false);
+        Btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn8ActionPerformed(evt);
+            }
+        });
 
-        Btn9.setBackground(new java.awt.Color(102, 102, 102));
+        Btn9.setBackground(new java.awt.Color(102, 204, 255));
+        Btn9.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn9.setForeground(new java.awt.Color(102, 102, 102));
+        Btn9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn9.setBorderPainted(false);
+        Btn9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn9.setEnabled(false);
+        Btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn9ActionPerformed(evt);
+            }
+        });
 
-        Btn10.setBackground(new java.awt.Color(102, 102, 102));
+        Btn10.setBackground(new java.awt.Color(102, 204, 255));
+        Btn10.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn10.setForeground(new java.awt.Color(102, 102, 102));
+        Btn10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn10.setBorderPainted(false);
+        Btn10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn10.setEnabled(false);
+        Btn10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn10ActionPerformed(evt);
+            }
+        });
 
-        Btn11.setBackground(new java.awt.Color(102, 102, 102));
+        Btn11.setBackground(new java.awt.Color(102, 204, 255));
+        Btn11.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn11.setForeground(new java.awt.Color(102, 102, 102));
+        Btn11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn11.setBorderPainted(false);
+        Btn11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn11.setEnabled(false);
+        Btn11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn11ActionPerformed(evt);
+            }
+        });
 
-        Btn12.setBackground(new java.awt.Color(102, 102, 102));
+        Btn12.setBackground(new java.awt.Color(102, 204, 255));
+        Btn12.setFont(new java.awt.Font("Lucida Console", 1, 18)); // NOI18N
+        Btn12.setForeground(new java.awt.Color(102, 102, 102));
+        Btn12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn12.setBorderPainted(false);
+        Btn12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btn12.setEnabled(false);
+        Btn12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn12ActionPerformed(evt);
+            }
+        });
+
+        jMenuBar1.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jMenuBar1.setForeground(new java.awt.Color(102, 102, 102));
 
         jMenu2.setText("Novo Jogo");
         jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -100,6 +223,11 @@ public class MemoryGame extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Sair");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -169,8 +297,56 @@ public class MemoryGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu2MouseClicked
 
     private void Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1ActionPerformed
-        NewGame();
+        Cards(1);
     }//GEN-LAST:event_Btn1ActionPerformed
+
+    private void Btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn2ActionPerformed
+        Cards(2);
+    }//GEN-LAST:event_Btn2ActionPerformed
+
+    private void Btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn3ActionPerformed
+        Cards(3);
+    }//GEN-LAST:event_Btn3ActionPerformed
+
+    private void Btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn4ActionPerformed
+        Cards(4);
+    }//GEN-LAST:event_Btn4ActionPerformed
+
+    private void Btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn5ActionPerformed
+        Cards(5);
+    }//GEN-LAST:event_Btn5ActionPerformed
+
+    private void Btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn6ActionPerformed
+        Cards(6);
+    }//GEN-LAST:event_Btn6ActionPerformed
+
+    private void Btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn7ActionPerformed
+        Cards(7);
+    }//GEN-LAST:event_Btn7ActionPerformed
+
+    private void Btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn8ActionPerformed
+        Cards(8);
+    }//GEN-LAST:event_Btn8ActionPerformed
+
+    private void Btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn9ActionPerformed
+        Cards(9);
+    }//GEN-LAST:event_Btn9ActionPerformed
+
+    private void Btn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn10ActionPerformed
+        Cards(10);
+    }//GEN-LAST:event_Btn10ActionPerformed
+
+    private void Btn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn11ActionPerformed
+        Cards(11);
+    }//GEN-LAST:event_Btn11ActionPerformed
+
+    private void Btn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn12ActionPerformed
+        Cards(12);
+    }//GEN-LAST:event_Btn12ActionPerformed
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -178,22 +354,124 @@ public class MemoryGame extends javax.swing.JFrame {
     
     //Variables
     Random r = new Random();
-    int[] values = {1,10,2,20,3,30,4,40,5,50,6,60};
+    int[] values = {1,2,3,4,5,6,10,20,30,40,50,60};
     int[] btnval = new int[12];
+    int x,y, card1,card2, pontos = 0;
+    boolean c1 = false,c2 =false;
     
-    public void ButtonEnabled(boolean cond){
-        Btn1.setEnabled(cond);
-        Btn2.setEnabled(cond);
-        Btn3.setEnabled(cond);
-        Btn4.setEnabled(cond);
-        Btn5.setEnabled(cond);
-        Btn6.setEnabled(cond);
-        Btn7.setEnabled(cond);
-        Btn8.setEnabled(cond);
-        Btn9.setEnabled(cond);
-        Btn10.setEnabled(cond);
-        Btn11.setEnabled(cond);
-        Btn12.setEnabled(cond);
+    public void ShowValues(boolean tirar, int num){
+        String text = "";
+        if(tirar){
+            text = null;
+        } 
+        else if(tirar == false){
+            
+            text = String.valueOf(btnval[num-1]);
+        }
+        if(num == 0){
+            Btn1.setText(text);
+            Btn2.setText(text);
+            Btn3.setText(text);
+            Btn4.setText(text);
+            Btn5.setText(text);
+            Btn6.setText(text);
+            Btn7.setText(text);
+            Btn8.setText(text);
+            Btn9.setText(text);
+            Btn10.setText(text);
+            Btn11.setText(text);
+            Btn12.setText(text);
+        }
+        else if(num == 1){
+            Btn1.setText(text);
+        }
+        else if(num == 2){
+            Btn2.setText(text);
+        }
+        else if(num == 3){
+            Btn3.setText(text);
+        }
+        else if(num == 4){
+            Btn4.setText(text);
+        }
+        else if(num == 5){
+            Btn5.setText(text);
+        }
+        else if(num == 6){
+            Btn6.setText(text);
+        }
+        else if(num == 7){
+            Btn7.setText(text);
+        }
+        else if(num == 8){
+            Btn8.setText(text);
+        }
+        else if(num == 9){
+            Btn9.setText(text);
+        }
+        else if(num == 10){
+            Btn10.setText(text);
+        }
+        else if(num == 11){
+            Btn11.setText(text);
+        }
+        else if(num == 12){
+            Btn12.setText(text);
+        }
+    }
+    
+    public void ButtonEnabled(boolean cond, int num){
+        if(num == 0){
+            Btn1.setEnabled(cond);
+            Btn2.setEnabled(cond);
+            Btn3.setEnabled(cond);
+            Btn4.setEnabled(cond);
+            Btn5.setEnabled(cond);
+            Btn6.setEnabled(cond);
+            Btn7.setEnabled(cond);
+            Btn8.setEnabled(cond);
+            Btn9.setEnabled(cond);
+            Btn10.setEnabled(cond);
+            Btn11.setEnabled(cond);
+            Btn12.setEnabled(cond);
+        }
+        else if(num == 1){
+            Btn1.setEnabled(cond);
+        }
+        else if(num == 2){
+            Btn2.setEnabled(cond);
+        }
+        else if(num == 3){
+            Btn3.setEnabled(cond);
+        }
+        else if(num == 4){
+            Btn4.setEnabled(cond);
+        }
+        else if(num == 5){
+            Btn5.setEnabled(cond);
+        }
+        else if(num == 6){
+            Btn6.setEnabled(cond);
+        }
+        else if(num == 7){
+            Btn7.setEnabled(cond);
+        }
+        else if(num == 8){
+            Btn8.setEnabled(cond);
+        }
+        else if(num == 9){
+            Btn9.setEnabled(cond);
+        }
+        else if(num == 10){
+            Btn10.setEnabled(cond);
+        }
+        else if(num == 11){
+            Btn11.setEnabled(cond);
+        }
+        else if(num == 12){
+            Btn12.setEnabled(cond);
+        }
+        
     }
     
     public boolean Checkvalues(int i){
@@ -207,14 +485,14 @@ public class MemoryGame extends javax.swing.JFrame {
                 }
             }
         }
-            JOptionPane.showMessageDialog(null, "SAiu");
+            //JOptionPane.showMessageDialog(null, "SAiu");
         return false;
     }
     
     public void AtribuiValor(int i){
         boolean resp = true;
         while(resp){
-            int val = r.nextInt(11);
+            int val = r.nextInt(12);
             btnval[i] = values[val]; 
             resp = Checkvalues(i);
         }
@@ -223,14 +501,71 @@ public class MemoryGame extends javax.swing.JFrame {
         
     }
     
+    public void CheckCards(){
+        if(x == y){
+//            String right = "right.mp3";
+//            Media song = new Media(new File(right).toURI().toString());
+//            MediaPlayer player = new MediaPlayer(song);
+//            player.setVolume(1);
+//            player.play();
+//            
+            pontos++;
+            JOptionPane.showMessageDialog(null, "Acertou");
+            ButtonEnabled(false,card1);
+            ButtonEnabled(false,card2);
+            c1 = false;
+            c2 = false;
+            if(pontos == 6){
+                JOptionPane.showMessageDialog(null, "Você Ganhou!");
+            }
+        }
+        else{
+//            String wrong = "wrong.mp3";
+//            Media song = new Media(new File(wrong).toURI().toString());
+//            MediaPlayer player = new MediaPlayer(song);
+//            player.setVolume(1);
+//            player.play();
+            
+            JOptionPane.showMessageDialog(null, "Errou");
+            c1 = false;
+            c2 = false;
+            ShowValues(true,card1);
+            ShowValues(true,card2);
+        }
+    }
+    
+    public void Cards(int num){
+        int g = btnval[num-1];
+        //JOptionPane.showMessageDialog(null, g);
+        ShowValues(false,num);
+        if(c1 == false){
+            x = g;
+            card1 = num;
+            c1 = true;
+        }
+        else if( c2 == false){
+            y =g;
+            card2 = num;
+            c2 = true;
+        }
+        if(c1 && c2){
+            CheckCards();
+        }
+    }
+    
+    
     public void NewGame() {
-        ButtonEnabled(true);
+        pontos=0;
+        ShowValues(true,0);
+        ButtonEnabled(true,0);
         for(int i = 0; i<=11; i++){
             AtribuiValor(i);
         }
         
         for(int i = 0; i <=11; i++){
-            JOptionPane.showMessageDialog(null, btnval[i]);
+            if(btnval[i]>=10){
+                btnval[i] = btnval[i]/10;
+            }
         }
         
         

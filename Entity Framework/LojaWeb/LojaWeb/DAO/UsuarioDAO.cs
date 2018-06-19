@@ -17,7 +17,7 @@ namespace LojaWeb.DAO {
         }
 
         public Usuario BuscarId(int id) {
-            return context.Usuarios.FirstOrDefault(u => u.Id == id);
+            return context.Usuarios.FirstOrDefault(u => u.Id == id); ;
         }
 
         public void Atualizar() {

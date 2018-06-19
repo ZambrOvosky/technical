@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Buscar</title>
+
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div> 
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Id da Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var prod in ViewBag.produtos)
+                    {
+                    <tr style="text-align:center">
+                        <td>@prod.Id</td>
+                        <td>@prod.Nome</td>
+                        <td>@prod.Descricao</td>
+                        <td>@prod.Preco</td>
+                        <td>@prod.Quantidade</td>
+                        <td>@prod.CategoriaID</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

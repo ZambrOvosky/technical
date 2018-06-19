@@ -26,5 +26,13 @@ namespace LojaWeb.Controllers
             dao.Inserir(usuario);
             return View();
         }
+
+        public ActionResult Busca()
+        {
+            UsuarioDAO dao = new UsuarioDAO();
+            IList<Usuario> usuarios = dao.ListarUsuarios();
+            ViewBag.usuarios = usuarios;
+            return View();
+        }
     }
 }

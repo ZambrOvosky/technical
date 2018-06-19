@@ -25,5 +25,13 @@ namespace LojaWeb.Controllers
             dao.Adicionar(catproduto);
             return View();
         }
+
+        public ActionResult Buscar()
+        {
+            CategoriaProdutoDAO dao = new CategoriaProdutoDAO();
+            IList<CategoriaProduto> categorias = dao.ListarCategorias();
+            ViewBag.categorias = categorias;
+            return View();
+        }
     }
 }

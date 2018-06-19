@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Busca</title>
+
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div> 
+        <form>
+            <table>
+                <thead>
+                    @*Cabeçalho da tabela*@
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @*Corpo da tabela*@
+                    @foreach (var usuario in ViewBag.usuarios)
+            {@*    o @ antes do foreach é para indicar que é uma laço *@
+            <tr style="text-align:center">
+                <td>@usuario.Id</td>
+                <td>@usuario.Nome</td>
+            </tr>
+}
+                </tbody>
+            </table>
+            
+        </form>
+    </div>
+</body>
+</html>

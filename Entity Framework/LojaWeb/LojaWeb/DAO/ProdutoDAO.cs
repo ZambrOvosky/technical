@@ -16,5 +16,10 @@ namespace LojaWeb.DAO {
         public IList<Produto> ListarProduto() {
             return context.Produtos.ToList();
         }
+
+        public Produto BuscaId(int id)
+        {
+            return context.Produtos.FirstOrDefault(p => p.Id == id);
+        }
     }
 }

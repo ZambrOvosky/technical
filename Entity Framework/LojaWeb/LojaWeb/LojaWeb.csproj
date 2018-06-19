@@ -189,6 +189,9 @@
     <Content Include="Views\Produto\Adicionar.cshtml" />
     <Content Include="Views\CategoriaProduto\FormCatProd.cshtml" />
     <Content Include="Views\CategoriaProduto\Adicionar.cshtml" />
+    <Content Include="Views\Usuario\Busca.cshtml" />
+    <Content Include="Views\CategoriaProduto\Buscar.cshtml" />
+    <Content Include="Views\Produto\Buscar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

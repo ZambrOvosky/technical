@@ -25,5 +25,13 @@ namespace LojaWeb.Controllers
             dao.Adicionar(produto);
             return View();
         }
+
+        public ActionResult Buscar()
+        {
+            ProdutoDAO dao = new ProdutoDAO();
+            IList<Produto> produtos = dao.ListarProduto();
+            ViewBag.produtos = produtos;
+            return View();
+        }
     }
 }

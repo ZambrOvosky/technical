@@ -158,9 +158,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriaProdutoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DAO\CategoriaProdutoDAO.cs" />
     <Compile Include="DAO\EntidadeContext.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +185,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Usuario\Form.cshtml" />
     <Content Include="Views\Usuario\Adicionar.cshtml" />
+    <Content Include="Views\Produto\FormProd.cshtml" />
+    <Content Include="Views\Produto\Adicionar.cshtml" />
+    <Content Include="Views\CategoriaProduto\FormCatProd.cshtml" />
+    <Content Include="Views\CategoriaProduto\Adicionar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

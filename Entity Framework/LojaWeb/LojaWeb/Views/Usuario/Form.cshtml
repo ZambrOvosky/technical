@@ -8,29 +8,13 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>Form</title>
-
-        <style>
-            label {
-                color: rgb(50, 50, 50);
-                font-family: 'Calisto MT'
-            }
-
-            #submit {
-                font-weight: bold;
-            }
-            #submit:hover {
-                background-color: rgb(50,50,50);
-                color: rgb(200, 200, 200);
-                transition-duration: .5s
-            }
-        </style>
     </head>
 
     <body>
         <div>
             <form action="/Usuario/Adicionar">
                 <label for="Nome">Nome: </label>
-                <input id="nome" name="usuario.Nome"  />
+                <input id="nome" name="usuario.Nome" />
                 <label for="Senha">Senha: </label>
                 <input type="password" size="8" maxlength="8" name="usuario.Senha" />
                 <br />

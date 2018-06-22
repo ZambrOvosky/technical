@@ -32,17 +32,20 @@
                 </thead>
                 <tbody>
                     @foreach (var cprod in ViewBag.categorias)
-                {
-                    <tr style="text-align:center">
-                        <td>@cprod.Id</td>
-                        <td>@cprod.Nome</td>
-                        <td>@cprod.Descricao</td>
-                    </tr>
-                }
+                    {
+                        <tr style="text-align:center">
+                            <td>@cprod.Id</td>
+                            <td>@cprod.Nome</td>
+                            <td>@cprod.Descricao</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
 
         </form>
     </div>
+    <form action="/CategoriaProduto/FormCatProd">
+        <input type="submit" value="Voltar" />
+    </form>
 </body>
 </html>

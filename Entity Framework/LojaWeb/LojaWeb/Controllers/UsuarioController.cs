@@ -34,5 +34,29 @@ namespace LojaWeb.Controllers
             ViewBag.usuarios = usuarios;
             return View();
         }
+
+        public ActionResult Editar(int id)
+        {
+            UsuarioDAO dao = new UsuarioDAO();
+            IList<Usuario> user = dao.BuscarId(id);
+            ViewBag.users = user;
+            return View();
+        }
+
+        public ActionResult Atualizar(Usuario usuario)
+        {
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario Uvelho = dao.Buscar1Id(usuario.Id);
+            Uvelho.Nome = usuario.Nome;
+            Uvelho.Senha = usuario.Senha; 
+            dao.Atualizar();
+            return View();
+        }
+
+        public ActionResult Remover()
+        {
+
+            return View();
+        }
     }
 }

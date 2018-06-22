@@ -192,6 +192,8 @@
     <Content Include="Views\Usuario\Busca.cshtml" />
     <Content Include="Views\CategoriaProduto\Buscar.cshtml" />
     <Content Include="Views\Produto\Buscar.cshtml" />
+    <Content Include="Views\Usuario\Editar.cshtml" />
+    <Content Include="Views\Usuario\Atualizar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

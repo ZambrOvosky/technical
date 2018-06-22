@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    <div> 
+    <div>
         <form>
             <table>
                 <thead>
@@ -34,20 +34,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(var prod in ViewBag.produtos)
+                    @foreach (var prod in ViewBag.produtos)
                     {
-                    <tr style="text-align:center">
-                        <td>@prod.Id</td>
-                        <td>@prod.Nome</td>
-                        <td>@prod.Descricao</td>
-                        <td>@prod.Preco</td>
-                        <td>@prod.Quantidade</td>
-                        <td>@prod.CategoriaID</td>
-                    </tr>
+                        <tr style="text-align:center">
+                            <td>@prod.Id</td>
+                            <td>@prod.Nome</td>
+                            <td>@prod.Descricao</td>
+                            <td>@prod.Preco</td>
+                            <td>@prod.Quantidade</td>
+                            <td>@prod.CategoriaID</td>
+                        </tr>
                     }
                 </tbody>
             </table>
         </form>
     </div>
+    <form action="/Produto/FormProd">
+        <input type="submit" value="Voltar" />
+    </form>
 </body>
 </html>

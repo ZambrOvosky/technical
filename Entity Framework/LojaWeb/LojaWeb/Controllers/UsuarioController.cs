@@ -53,9 +53,11 @@ namespace LojaWeb.Controllers
             return View();
         }
 
-        public ActionResult Remover()
+        public ActionResult Remover(int id)
         {
-
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario user = dao.Buscar1Id(id);
+            dao.Remover(user);
             return View();
         }
     }

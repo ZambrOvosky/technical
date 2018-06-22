@@ -43,6 +43,8 @@
                             <td>@prod.Preco</td>
                             <td>@prod.Quantidade</td>
                             <td>@prod.CategoriaID</td>
+                            <td>@Html.ActionLink(" Editar ", "Editar", new { id = prod.Id })</td>
+                            <td>@Html.ActionLink(" Remover ", "Remover", new { id = prod.Id })</td>
                         </tr>
                     }
                 </tbody>

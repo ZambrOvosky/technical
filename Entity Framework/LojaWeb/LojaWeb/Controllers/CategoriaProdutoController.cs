@@ -33,5 +33,31 @@ namespace LojaWeb.Controllers
             ViewBag.categorias = categorias;
             return View();
         }
+
+        public ActionResult Editar(int id)
+        {
+            CategoriaProdutoDAO dao = new CategoriaProdutoDAO();
+            IList<CategoriaProduto> catprods = dao.ListarCategoriasId(id);
+            ViewBag.catprods = catprods;
+            return View();
+        }
+
+        public ActionResult Atualizar(CategoriaProduto catproduto)
+        {
+            CategoriaProdutoDAO dao = new CategoriaProdutoDAO();
+            CategoriaProduto Vcp = dao.BuscarId(catproduto.Id);
+            Vcp.Nome = catproduto.Nome;
+            Vcp.Descricao = catproduto.Descricao;
+            dao.Atualizar();
+            return View();
+        }
+
+        public ActionResult Remover(int id)
+        {
+            CategoriaProdutoDAO dao = new CategoriaProdutoDAO();
+            CategoriaProduto cp = dao.BuscarId(id);
+            dao.Remover(cp);
+            return RedirectToAction("Buscar");
+        }
     }
 }

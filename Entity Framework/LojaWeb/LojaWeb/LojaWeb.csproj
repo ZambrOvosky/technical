@@ -197,6 +197,8 @@
     <Content Include="Views\Usuario\Remover.cshtml" />
     <Content Include="Views\Produto\Editar.cshtml" />
     <Content Include="Views\Produto\Atualizar.cshtml" />
+    <Content Include="Views\CategoriaProduto\Editar.cshtml" />
+    <Content Include="Views\CategoriaProduto\Atualizar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

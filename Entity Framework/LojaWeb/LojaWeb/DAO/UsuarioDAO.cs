@@ -16,8 +16,13 @@ namespace LojaWeb.DAO {
             return context.Usuarios.ToList();
         }
 
-        public Usuario BuscarId(int id) {
-            return context.Usuarios.FirstOrDefault(u => u.Id == id); ;
+        public IList<Usuario> BuscarId(int id) {
+            return (from u in context.Usuarios where u.Id == id select u).ToList();
+        }
+
+        public Usuario Buscar1Id(int id)
+        {
+            return context.Usuarios.FirstOrDefault(u => u.Id == id);
         }
 
         public void Atualizar() {

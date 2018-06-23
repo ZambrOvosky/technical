@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    <div> 
+    <div>
         <form>
             <table>
                 <thead>
@@ -33,16 +33,28 @@
                 <tbody>
                     @*Corpo da tabela*@
                     @foreach (var usuario in ViewBag.usuarios)
-            {@*    o @ antes do foreach é para indicar que é uma laço *@
-            <tr style="text-align:center">
-                <td>@usuario.Id</td>
-                <td>@usuario.Nome</td>
-            </tr>
-}
+                    {@*    o @ antes do foreach é para indicar que é uma laço *@
+                    <tr style="text-align:center">
+                        <td>@usuario.Id</td>
+                        <td>@usuario.Nome</td>
+                        <td>@Html.ActionLink(" Editar ", "Editar", new { id = usuario.Id })</td>
+                        <td>@Html.ActionLink(" Remover ", "Remover", new { id = usuario.Id })</td>
+                    </tr>
+                }
                 </tbody>
             </table>
-            
+
         </form>
     </div>
+    <form action="/Usuario/Form">
+        <input type="submit" value="Voltar" />
+    </form>
 </body>
 </html>
+
+
+@*if (confirm("Press a button!")) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }*@
